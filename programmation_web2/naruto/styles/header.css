@@ -1,0 +1,234 @@
+*{
+    box-sizing: content-box;
+    margin: 0%;
+    padding: 0%;
+}
+header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: start;
+    width: 100vw;
+    height: 30vh;
+    margin: 0;
+    padding: 0;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+}
+.logo-div{
+    width: fit-content;
+    height: fit-content;
+    margin-left: 1vw;
+    margin-top: 1vh;
+}
+.logo-div img{
+    width: 11vw;
+    height: fit-content;
+    object-fit: cover;
+    object-position: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.logo-div:hover{
+    cursor: pointer;
+}
+.lang-div{
+    pointer-events: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 2vw;
+    justify-content: center;
+    align-items: start;
+    width: 27vw;
+    height: fit-content;
+}
+.lang-div span{
+    width: 20px;
+    height: fit-content;
+}
+.lang-div p{
+    font-size: 12px;
+}
+.lang-div-button{
+    display: flex;
+    flex-direction: column;
+    justify-content:start;
+    align-items: center;
+    width: 100%;
+    height: fit-content;
+    position: relative;
+}
+input::cue{
+    color: black;
+    background-color: white;
+}
+.afficher-lang span{
+    font-size: 13px;
+    letter-spacing: 0;
+    font-weight: 400;
+    font-family: 'Wellfleet', monospace;
+    text-shadow: .5px .5px .5px white;
+    color: white;
+    padding-right: 20px;
+}
+.afficher-lang{
+    position: relative;
+    width: 100%;
+    background-color: black;
+    white-space: nowrap;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+.afficher-lang input{
+    position: absolute;
+    width: 15px;
+    height: auto;
+    right: 0%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.menu-div{
+    margin:1vh;
+    display: flex;
+    width: 11vh;
+    height: 11vh;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 0;
+    background-color: black;
+    transition: all .42s;
+}
+.menu-div:hover{
+    cursor: pointer;
+    margin: 0;
+    width: 13vh;
+    height: 13vh;
+}
+.menu-div img{
+    width: 50%;
+    fill: white;
+    height: auto;
+    object-fit: cover;
+    object-position: center;
+    z-index: 2;
+    filter: drop-shadow(1px 1px 1px white);
+}
+.menu-div p{
+    font-size: 13px;
+    color: white;
+    font-weight: 400;
+    font-family: 'Bebas Neue', sans-serif;
+    text-shadow: 0.5px 0.5px white, -0.5px -0.5px white;
+}
+.button-lang{
+    margin-top: 4vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: end;
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+.button-lang p{
+    width: 40px;
+    letter-spacing: 2px;
+    height: auto;
+    padding: 5px 5px ;
+    color: white;
+
+}
+.langue{
+    position: absolute;
+    top: 100%;
+    left: 0%;
+    width: 90%;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    overflow: hidden;
+}
+.langue p{
+    opacity: 0;
+    text-align: center;
+}
+p{
+    font-size: 15px;
+    color: white;
+    letter-spacing: 0.5px;
+    font-weight: 400;
+    font-family: 'Bebas Neue', sans-serif;
+    text-shadow: 0.5px 0.5px white, -0.5px -0.5px white;    
+}
+
+.button-lang-1:hover .langue {
+    opacity: 1;
+    pointer-events: all;
+}
+.button-lang-1{
+    width: fit-content;
+    height: fit-content;
+    position: relative;
+}
+.button-lang-1:hover .langue, .button-lang-1:hover .langue p{
+    background-color: black;
+}
+.button{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    border-radius: 20px;
+    border: 1px solid black;
+}
+.button-lang-1:hover .button{
+    background-color: transparent;
+    padding: 0%;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+.langue div:hover, .button div:hover{
+    background-color: rgb(69, 66, 66);
+}
+.langue div, .button div{
+    border-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+.langue div .last{
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.button-lang-1{
+    background-color: black;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border: 1px solid white;
+}
+.material-symbols-outlined{
+    color:black;
+    background-color: white;
+    width: 10%;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    z-index: 1;
+}
+.button-lang-1:hover .material-symbols-outlined{
+    opacity: 0;
+}
+.button-lang-1:hover .button, .langue{
+   cursor: pointer;
+}
+.button-lang-1:hover .langue{
+    border: 2px solid rgb(0, 0, 0);
+}
+.button-lang-1:hover .button{
+    background-color: rgb(0, 0, 0);
+}

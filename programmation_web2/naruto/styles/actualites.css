@@ -1,0 +1,177 @@
+.actualite-main{
+    padding-top: 7vh;
+    margin-top: 10vh;
+    position: relative;
+    padding-bottom: 5vh;
+}
+.actualites{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: auto;
+    height: auto;
+}
+.actualites img{
+    width: 50vw;
+    height: 30vh;
+    object-fit: cover;
+    object-position: center;
+}
+.grid-actualites{
+    margin-top: 30vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    column-gap: 1.5vw;
+    width:auto;
+    height: auto;
+    overflow-x: scroll;
+    padding-left: 6.5vw;
+}
+.grid-actualites img{
+    width: 23vw;
+    height: auto;
+    object-fit: cover;
+    object-position: center;
+}
+.div-grid{
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    position: relative;
+}
+.img-text{
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    background-color: white;
+    padding-left: 1vw;
+    padding-right: 1vw;
+    padding-bottom: 2vh;
+    padding-top: 2vh;
+}
+.date {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2.4vh;
+    font-weight: 500;
+    color: black;
+    margin-bottom: 1vh;
+}
+.description-pers{
+    font-family: Helvetica, sans-serif;
+    font-size: 2vh;
+    color: rgb(0, 0, 0);
+    letter-spacing: 1px;
+    font-weight: lighter;
+    line-height: 3vh;
+}
+.rubrique-naruto{
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: black;
+    color: rgb(249, 147, 39);
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2.4vh;
+    font-weight: 500;
+}
+.div-img{
+    overflow: hidden;
+
+}
+.div-grid:hover .div-img img{
+    transform: scale(1.4);
+    transition: transform 1.4s;
+}
+.div-grid:hover .date, .div-grid:hover .description-pers{
+    opacity: 0.5;
+}
+.div-grid:hover{
+    cursor: pointer;
+}
+.actualite-footer{
+    margin-top: 5vh;
+    margin-left: 6.5vw;
+    margin-right: 6.5vw;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.button1-actual, .button2-actual{
+    background-color: transparent;
+    display: flex;
+    justify-self: center;
+    align-items: center;
+    transition: all 0.42s;
+}
+.button1-actual{
+    margin-right: 10px;
+}
+.button2-actual{
+    margin-left: 10px;
+}
+.button1-actual span, .button2-actual span{
+    width: 5vh;
+    height: 5vh;
+    color: white;
+    background-color: transparent;
+    padding: 0.5vw 1vh;
+}
+.actualite-footer-buttons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+.voir-plus{
+    border: 2px rgb(0, 0, 0) solid;
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    transition: all 0.42s;
+}
+.voir-plus p{
+    color: rgb(0, 0, 0);
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2.1vw;
+    font-weight: 500;
+}
+.voir-plus img{
+    width: 2.5vw;
+    height: auto;
+    object-fit: cover;
+    object-position: center;
+    z-index: 3;
+}
+
+.voir-plus:hover p{
+    color: white;
+}
+.voir-plus:hover{
+    background-color: rgb(0, 0, 0);
+}
+.button1-actual:hover, .button2-actual:hover{
+    background-color: white;
+}
+.button1-actual:hover span, .button2-actual:hover span{
+    color: black;
+}
+.button1-actual:hover, .button2-actual:hover, .voir-plus:hover{
+    cursor: pointer;
+}
+.voir-plus:hover .kunai-blanc{
+    opacity: 1;
+    transition: 0.42s;
+}
+.kunai-blanc{
+    position: absolute;
+    opacity: 0;
+    width: 100%;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: fit-content;
+}

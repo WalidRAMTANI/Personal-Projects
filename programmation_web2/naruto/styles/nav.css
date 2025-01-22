@@ -1,0 +1,54 @@
+.nav-bar{
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    height: 20vh;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+    margin-bottom: 2vh;
+    margin-left: 0.8vw;
+
+}
+.left-div{
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    height: 100%;
+    align-items: center;
+    justify-content: space-between;
+}
+.left-div img{
+    width: 2vw;
+    height: auto;
+    object-fit: cover;
+    object-position: center;
+}
+.right-div{
+    margin-right: 2vw;
+    margin-top: 5vh;
+}
+.right-div img{
+    width:fit-content;
+    height: fit-content;
+    object-fit: cover;
+    object-position: center;
+}
+.text-share p{
+    font-size: 0.8rem;
+    color: black;
+    writing-mode: vertical-lr;
+    text-align: center;
+}
+.text-share{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.nav-bar a{
+    text-decoration: none;    
+}
+.nav-bar a:hover, .text-share:hover{
+    cursor: pointer;
+}

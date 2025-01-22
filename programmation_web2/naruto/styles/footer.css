@@ -1,0 +1,110 @@
+.foot-bar{
+    background-color: #d8d8d8;
+    padding-top: 10vh;
+}
+.grid-footer{
+    height: auto;
+    width: auto;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    padding-left: 6.5vw;
+    padding-right: 6.5vw;
+    column-gap: 2vw;
+    row-gap: 2vw;
+}
+.div-img-foot-bar{
+    width: fit-content;
+    height: fit-content;
+}
+.div-img-foot-bar img{
+    width: 27vw;
+    height: fit-content;
+    object-position: center;
+    object-fit: cover;
+}
+.div-img-foot-bar:hover{
+    filter:brightness(80%);
+    cursor: pointer;
+}
+#footer-text{
+    padding-left: 6.5vw;
+    padding-top: 9vh;
+    padding-bottom: 20vh;
+}
+#footer-text p{
+    color: black;
+    font-family: Roboto;
+    font-size: 10px;
+}
+.nav-bar-hh{
+    background-color: black;
+    width: 100%;
+    height: fit-content;
+    box-sizing: content-box;
+    position: relative;
+}
+.shueisha_f1{
+    padding-top: 4vw;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+#shuesha_div{
+    margin-left: 4vw;
+    width: auto;
+    height: auto;
+}
+#shuesha_div img{
+    width: 12vw;
+    height: auto;
+    object-fit: cover;
+    object-position: center;
+}
+#bne_logo-div{
+    width: auto;
+    height: auto;
+    margin-left: 2vw;
+}
+#bne_logo-div img{
+    width: 15vw;
+    height: auto;
+    object-fit: cover;
+    object-position: center;
+}
+.mention{
+    margin-left: 4vw;
+    margin-top: 4vh;
+}
+.mention p, .generale_constate a{
+    color: rgb(255, 255, 255);
+    font-family: 'Roboto', sans-serif;
+    font-size: 10px;
+    text-shadow: none;
+    line-height: 16px;
+    text-decoration: none;
+}
+.generale_constate{
+    height: auto;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    padding-right: 4vw;
+    margin-top: 10vh;
+}
+.ligne_v{
+    margin-right: 1.5vw;
+}
+.ligne_vert{
+    height: 20px;
+    width: 1.5vw;
+    border-left: 2px solid white;
+}
+.generale_constate a:hover{
+    cursor: pointer;
+    text-decoration: underline;
+}
+.grid-temp{
+    display: grid;
+    grid-template-columns: auto auto;
+    padding-bottom: 5vh;
+}
