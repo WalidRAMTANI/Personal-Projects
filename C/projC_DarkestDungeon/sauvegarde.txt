@@ -1,0 +1,15 @@
+2 0 1 2 3 20
+T walid 0 15 20 2 2 1 0 Katana 0 0 1 1 0 Armor 1 0
+T amine 1 25 10 3 1 2 1 Shield 1 0 2 2 1 Boots 1 1
+S slimane 2 30 15 5 0 0 0 None 0 0 3 4 2 Helmet 1 2
+S khaled 3 20 25 1 4 3 2 Sword 2 1 0 0 0 None 0 0
+A Katana 5 0 0 0 0
+A Armor 0 10 5 0 1
+A Shield 2 8 3 1 0
+A Helmet 1 5 7 2 0
+A Boots 3 2 4 0 1
+A Cloak 0 3 2 1 2
+P walid 0 15 20 2 2 1 0 Katana 0 0 1 1 0 Armor 1 0
+P amine 1 25 10 3 1 2 1 Shield 1 0 2 2 1 Boots 1 1
+P slimane 2 30 15 5 0 0 0 None 0 0 3 4 2 Helmet 1 2
+P khaled 3 20 25 1 4 3 2 Sword 2 1 0 0 0 None 0 0

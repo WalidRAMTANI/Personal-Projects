@@ -1,0 +1,256 @@
+RAPPORT DE PROJET
+DARKEST DUNGEON
+RAMTANI Walid - LI Elodie
+
+
+
+
+Présentation du Travail Rendu :
+--------------------------------
+
+Ce projet consiste à développer un jeu de type "Darkest Dungeon" en langage C. 
+Il inclut plusieurs fonctionnalités telles que la gestion des personnages, des accessoires, des ennemis, des combats, et des bâtiments comme le Sanitarium et la Taverne. 
+Le joueur peut ajouter des personnages, leur attribuer des accessoires, les envoyer au combat contre des ennemis, et les soigner ou réduire leur stress dans le Sanitarium et la Taverne respectivement. 
+Le déroulement du jeu se fera en tours où le joueur choisit des actions pour ses personnages et affronte des ennemis.
+
+
+
+Description du Travail Fourni :
+--------------------------------
+
+De nombreuses fonctions ont été implémentées afin de permettre une bonne utilisation du code final, menant ainsi à une prise en main correcte.
+
+Voici une explication simple et efficace des fonctions présentes dans le fichier p.c :
+
+
+initClasses(Classe **classe) :
+Initialise les différentes classes de personnages avec leurs attributs (nom, attaque, défense, etc.).
+
+afficherClasses(Classe **classe) :
+Affiche les informations de toutes les classes de personnages.
+
+ajouter_personnage(Classe **classe, Perso_dispo **p, int nb_classe) :
+Ajoute un nouveau personnage à une liste de personnages disponibles.
+
+afficherPersonnage1(Personnage *p) :
+Affiche les détails d'un personnage spécifique.
+
+afficherPersonnage(Perso_dispo *p) :
+Affiche la liste des personnages disponibles.
+
+creerAccessoire(const char *nom, int att, int def, int HP, int rest, int stress) :
+Crée un nouvel accessoire avec les attributs spécifiés.
+
+Free_personnage(Perso_dispo *p) :
+Libère la mémoire allouée pour la liste des personnages.
+
+FreeClasses(Classe **classe) :
+Libère la mémoire allouée pour les classes.
+
+creer_start_accessoire(AccessoireDispo **l) :
+Crée et ajoute les premiers accessoires disponibles.
+
+libererAccessoires(AccessoireDispo *l) :
+Libère la mémoire allouée pour la liste des accessoires.
+
+afficherAccessoire(Accessoire acc) :
+Affiche les détails d'un accessoire spécifique.
+
+afficherListeAccessoires(AccessoireDispo *l) :
+Affiche la liste des accessoires disponibles.
+
+ajouterDebutPerso(Perso_dispo **liste, Perso_dispo *nouveau) :
+Ajoute un personnage au début de la liste des personnages disponibles.
+
+tailleSanitarium(Sanitarium* liste) :
+Calcule et retourne la taille de la liste du sanitarium.
+
+ajouterDebutSanitarium(Sanitarium** liste, Personnage* nouveau) :
+Ajoute un personnage au début de la liste du sanitarium.
+
+ajouterDebutACC(AccessoireDispo **liste, Accessoire *nouveau) :
+Ajoute un accessoire au début de la liste des accessoires disponibles.
+
+ExtraireUnPersonnage(Perso_dispo **l, int id) :
+Extrait un personnage de la liste des personnages disponibles par son ID.
+
+ExtraireUnSanitarium(Sanitarium** liste, int id) :
+Extrait un personnage du sanitarium par son ID.
+
+ExtraireUnTaverne(Taverne** liste, int id) :
+Extrait un personnage de la taverne par son ID.
+
+ExtraireUnAccessoireParId(AccessoireDispo **l, char id) :
+Extrait un accessoire de la liste des accessoires disponibles par son ID.
+
+AfficherPersonnagesAvecAccessoires(Perso_dispo *l) :
+Affiche les détails des personnages avec leurs accessoires.
+
+afficherHPStr(Perso_dispo *perso) :
+Affiche les noms, HP et stress des combattants.
+
+ajouter_accessoire_features(Personnage **perso, Accessoire *acc1) :
+Ajoute les caractéristiques d'un accessoire à un personnage.
+
+CreerEnnemi(const char *nom, int niveau, int attenn, int defenn, int HPenn, int attstrenn) :
+Crée un nouvel ennemi avec les attributs spécifiés.
+
+freeEnnemi(Ennemi *e) :
+Libère la mémoire allouée pour un ennemi.
+
+createEnnemiVivant(Ennemi *ennmi) :
+Crée un élément de la liste des ennemis vivants.
+
+addEnnemiVivant(EnnemiVivant **head, Ennemi *ennmi) :
+Ajoute un ennemi vivant à la tête de la liste.
+
+freeEnnemis(EnnemiVivant *head) :
+Libère la mémoire allouée pour la liste des ennemis vivants.
+
+AfficherEnnemisVivants(EnnemiVivant *head) :
+Affiche la liste des ennemis vivants.
+
+obtenirPersonnage(Perso_dispo *liste, int id) :
+Retourne un personnage de la liste par son ID.
+
+genererNombreAleatoireENTRE812(float min, float max) :
+Génère un nombre aléatoire entre min et max.
+
+tailleListe(Perso_dispo *liste) :
+Calcule et retourne la taille de la liste des personnages disponibles.
+
+supprimerPerso(Perso_dispo **liste, Perso_dispo *Supprimer) :
+Supprime un personnage de la liste des personnages disponibles.
+
+supprimerEnnemi(EnnemiVivant **liste) :
+Supprime un ennemi de la liste des ennemis vivants.
+
+afficherSanitarium(Sanitarium **sant) :
+Affiche les détails des personnages dans le sanitarium.
+
+tailleTaverne(Taverne *liste) :
+Calcule et retourne la taille de la liste de la taverne.
+
+ajouterDebutTaverne(Taverne** liste, Personnage* nouveau) :
+Ajoute un personnage au début de la liste de la taverne.
+
+afficherTaverne(Taverne **liste) :
+Affiche les détails des personnages dans la taverne.
+
+creerRoulotte(char* nom, int attbonus, int defbonus, int HPbonus, int restbonus, int strred, int prix, int num) :
+Crée une nouvelle roulotte avec les attributs spécifiés.
+
+ajouterRoulotte(Roulotte **liste, Roulotte *nouveau) :
+Ajoute une roulotte à la liste des roulottes disponibles.
+
+afficherRoulottes(Roulotte *liste) :
+Affiche la liste des accessoires dans la roulotte.
+
+libererRoulottes(Roulotte *liste) :
+Libère la mémoire allouée pour la liste des roulottes.
+
+libererTraverne(Taverne *liste) :
+Libère la mémoire allouée pour la liste de la taverne.
+
+libererSantarium(Sanitarium *liste) :
+Libère la mémoire allouée pour la liste du sanitarium.
+
+rechercherRoulotteParId(Roulotte *liste, int id) :
+Recherche une roulotte par son ID.
+
+ajouter_per(Perso_dispo *p, Classe **classe, int num) :
+Ajoute une classe à un personnage.
+
+Charger_information_simples(FILE *fichier, int *p2, int *p4, int *p6, int *p8, int *nb_combat, int *or) :
+Charge les informations simples depuis un fichier.
+
+Charger_personnages_disponibles(FILE *fichier, Perso_dispo **personnage_disponible, Classe **classe) :
+Charge les personnages disponibles depuis un fichier.
+
+Charger_personnages_traverne(FILE *fichier, Taverne **traverne, Classe **classe) :
+Charge les personnages de la taverne depuis un fichier.
+
+Charger_personnages_sanitarium(FILE *fichier, Sanitarium **sanitarium, Classe **classe) :
+Charge les personnages du sanitarium depuis un fichier.
+
+Charger_accessoires_dispo(FILE *fichier, AccessoireDispo **tete) :
+Charge les accessoires disponibles depuis un fichier.
+
+Supprimer_jusqu_a_id(EnnemiVivant **liste, int id) :
+Supprime les ennemis de la liste jusqu'à un certain ID.
+
+main() :
+Fonction principale qui exécute le jeu avec toutes les fonctionnalités implémentées.
+
+
+
+Comment Compiler et Lancer le Programme :
+-----------------------------------------
+
+1. Assurez-vous d'avoir un compilateur C installé sur votre machine (par exemple, gcc).
+
+2. Placez tous les fichiers dans un même répertoire.
+
+3. Ouvrez un terminal ou une invite de commandes et naviguez vers le répertoire contenant les fichiers du projet.
+
+4. Compilez le programme en utilisant la commande suivante :
+        		gcc -std=c17 -Wall darkest_dungeon.c -o darkest_dungeon
+
+   	    Cette commande génère un exécutable nommé `darkest_dungeon`.
+
+5. Pour lancer le programme, exécutez la commande suivante dans le terminal :
+        		./darkest_dungeon
+
+
+
+Difficultés Rencontrées :
+-------------------------
+
+1. Allocation Dynamique de Mémoire :
+
+Une des principales difficultés rencontrées a été la gestion de l'allocation et de la libération dynamique de la mémoire pour les structures complexes telles que les personnages, les accessoires et les ennemis. Cela a nécessité une attention particulière pour éviter les fuites de mémoire.
+
+2. Gestion des Listes Chaînées :
+
+	L'utilisation des listes chaînées pour stocker les personnages, les accessoires et les ennemis a été complexe. Il a fallu implémenter des fonctions pour ajouter, supprimer et parcourir ces listes de manière efficace.
+
+3. Gestion des Entrées Utilisateur :
+
+La gestion des entrées utilisateur et la validation des données saisies ont été des défis. Il a fallu s'assurer que les entrées utilisateur soient correctes pour éviter les plantages du programme.
+
+
+
+Bugs Non-Corrigés :
+-------------------
+
+1. Gestion des Erreurs de Mémoire :
+
+Bien que des efforts aient été faits pour gérer l'allocation et la libération de la mémoire, il peut encore y avoir des cas où des erreurs de mémoire surviennent, notamment lors de l'ajout ou de la suppression d'éléments dans les listes chaînées.
+
+2. Entrées Utilisateur :
+
+Certaines entrées utilisateur peuvent ne pas être correctement validées, ce qui peut entraîner des comportements inattendus ou des plantages du programme.
+
+
+
+Choix Réalisés Quant à l'Implémentation :
+-----------------------------------------
+
+1. Utilisation des Listes Chaînées :
+
+Les listes chaînées ont été utilisées pour stocker les personnages, les accessoires et les ennemis. Cela permet une gestion dynamique des éléments et une flexibilité pour ajouter et supprimer des éléments.
+
+2. Structures de Données :
+
+Des structures de données spécifiques ont été définies pour les personnages, les accessoires, les ennemis et les bâtiments. Cela permet de regrouper les attributs associés et de faciliter la gestion des éléments dans le jeu.
+
+3. Interface Utilisateur :
+
+L'interface utilisateur est basée sur des entrées et des sorties de texte simples dans le terminal. Cela permet une interaction facile avec le joueur sans nécessiter de bibliothèques graphiques supplémentaires.
+
+
+
+Notre retour sur le devoir :
+-------------------------
+
+Grâce à l'implémentation de ce jeu, nous avons pu mettre en pratique les notions vues en cours. La durée de deux semaines de vacances (à partager également entre autres travaux, ou partiel/contrôles) nous a permis de nous pousser à travailler efficacement et à nous organiser pour pouvoir rendre le projet à temps. Le travail en équipe et la coordination mis en place à l’aide de l’utilisation de Github ont été des éléments clés pour la réussite de ce projet.
