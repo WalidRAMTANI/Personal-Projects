@@ -1,0 +1,64 @@
+section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 5px solid rgb(224, 132, 132);
+    background-color: rgb(210, 193, 255);
+}
+#title{
+    position: relative;
+}
+.title1{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+h1{
+    font-size: 40px;
+    -webkit-text-stroke: 2px  rgb(121, 13, 9);
+    
+}
+h1:last-child{
+    color: rgb(96, 146, 255);
+    animation-name: skill;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+}
+@keyframes skill{
+    0%, 100%{
+        clip-path: polygon(0 0, 100% 0, 100% 50%, 100% 100%, 0 100%, 0 50%);
+    }
+    20%{
+        clip-path: polygon(0 0, 85% 18%, 100% 50%, 100% 100%, 0 100%, 0 50%);
+    }
+    40%{
+        clip-path: polygon(0 0, 36% 53%, 59% 72%, 100% 100%, 0 100%, 0 50%);
+    }
+    60%{
+        clip-path: polygon(0 41%, 13% 59%, 27% 80%, 51% 100%, 0 100%, 0 50%);
+    }
+    80%{
+        clip-path: polygon(1% 1%, 46% 30%, 81% 55%, 100% 100%, 0 100%, 0 56%);
+    }
+}
+#div-choice{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+    column-gap: 100px;
+    margin-bottom: 50px;
+}
+#div-choice div{
+    padding: 20px 50px;
+    border: 2px solid rgba(19, 53, 243, 0.692);
+}
+button{
+    color: coral;
+    background-color: rgb(212, 171, 250);
+    padding: 10px 30px;
+    font-size: 30px;
+}
