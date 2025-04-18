@@ -1,0 +1,396 @@
+:root {
+	--gradX: 0%;
+	--gradY: 0%;
+}
+
+@property --gradX {
+syntax: '<percentage>';
+initial-value: 50%;
+inherits: true;
+}
+
+@property --gradY {
+syntax: '<percentage>';
+initial-value: 0%;
+inherits: true;
+}
+
+body{
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    font-size: 1.25em;
+}
+
+.BG{
+    position: absolute;
+    width: 100%;
+    top: 0;
+    z-index: -2;
+}
+
+
+.mainDiv{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.CardDiv{
+    position: relative;
+    width: 60%;
+    height: 80%;
+    background-color: #2a2a2a9a;
+    border: 0.35rem solid;
+    border-image: radial-gradient(ellipse at var(--gradX) var(--gradY), var(--c1) 10%, var(--c2) 30%) 30;
+    display: flex;
+    animation: borderRadial 7s linear infinite forwards;
+}
+
+.CardDiv::before{
+    content: "";
+    position: absolute;
+    top: -0.35rem;
+    left: -0.35rem;
+    width: 100%;
+    height: 100%;    
+    background: linear-gradient(
+      rgba(255, 255, 255, 0.05) 0px,
+      rgba(255, 255, 255, 0.05) 1px,
+      transparent 3px,
+      transparent 30px
+    );
+    background-size:  100% 30px;
+
+    border: 0.35rem solid ;
+    border-image: radial-gradient(ellipse at var(--gradX) var(--gradY), var(--c1) 10%, var(--c2) 30%) 30;
+    animation: borderRadial 7s linear infinite forwards reverse,  pan-overlay 60s infinite linear;
+}
+
+@keyframes pan-overlay {
+  
+    from {
+      background-position: 0% 0%
+    }
+    
+    to {
+      background-position: 0% 100%;
+      
+    }
+  }
+
+@keyframes borderRadial {
+	0%{
+        --gradX: 0%;
+        --gradY: 0%;
+    }
+    25%{
+        --gradX: 100%;
+        --gradY: 0%;
+    }
+    50%{
+        --gradX: 100%;
+        --gradY: 100%;
+    }
+    75%{
+        --gradX: 0%;
+        --gradY: 100%;
+    }
+    100%{
+        --gradX: 0%;
+        --gradY: 0%;
+    }
+
+    
+   
+}
+
+/*CSS Colonne de gauche*/
+.LeftDiv{
+    width: 45%;
+    height: 100%;
+    position: relative;
+    border-top-left-radius:20px;
+    font-family: "League Spartan";
+    letter-spacing: 2px;
+    font-weight: bold;
+}  
+
+.CharacterName{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    text-shadow: 0px 5px 5px black;
+}
+.Name{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 9%;
+    color: white;
+    font-size: 3em;
+    letter-spacing: 1px;
+}
+
+
+.Logo{
+    height: 100%;
+    filter: drop-shadow(0px 0px 10px var(--c1));
+}
+
+
+
+.Name p{
+    padding-top: 1.5%;
+    text-align: center;
+}
+
+
+.Class{
+    margin-left: 2%;
+    position: relative;
+    width: 100%;
+    height: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 3;
+}
+
+.Class::before{
+    content: var(--citation);
+    font-weight: 400;
+    position: absolute;
+    font-style: italic;
+    font-size: 0.8em;
+    top: 130%;
+    width: 85%;
+    text-align: center;
+    color: white;
+}
+
+.CharacterIMG{
+    position: absolute;
+    bottom: 0;
+    height: 80%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    filter: drop-shadow(0px 0px 5px var(--c1));
+    z-index: 2;
+}
+
+/*CSS Colonne de droite*/
+.RightDiv{
+    width: 55%;
+    height: 100%;
+    font-family: "League Spartan";
+    letter-spacing: 2px;
+    border-left: 0.35rem solid;
+    border-image: linear-gradient(
+    transparent 10%, 
+    var(--c2) 15%, var(--c1) 60%, var(--c2) 85%,
+    transparent 90%
+    ) 30;
+}
+
+.RightDiv:before{
+    content: "Crée par Davideuh";
+    color: white;
+    position: absolute;
+    right: 0;
+    font-size: 0.7em;
+    font-style: italic;
+    text-decoration:underline;
+    opacity: 0.5;
+    font-family:"pixel nes";
+}
+/*Div principal Résumé & Combo*/
+.ActiveSkills{
+    width: 95%;
+    height:fit-content;
+    margin: auto;
+    margin-top: 2%;
+    text-align: center;
+    font-family:'Protest Riot', sans-serif;
+}
+/*Titre Résumé & Combo*/
+.ActiveSkills h1{
+    margin: auto;
+    position: relative;
+    width: fit-content;
+    border: 0.35rem solid;
+    border-image: radial-gradient(ellipse at var(--gradX) var(--gradY), var(--c1) 10%, var(--c2) 30%) 20;
+    font-family:'League Spartan', sans-serif;
+    font-size: 2em;
+    color: white;
+    padding: 1%;
+    background-color: rgba(0, 0, 0, 0.3);
+    text-shadow: 0px 5px 5px black;
+    box-shadow: 0px 00px 15px rgba(131, 130, 130, 0.671);
+    animation: borderRadial 7s linear infinite, movingTitle 3.5s linear infinite alternate-reverse;
+}
+
+.ActiveSkills h1::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: -0.35rem;
+    left: -0.35rem;
+    border: 0.35rem solid;
+    border-image: radial-gradient(ellipse at var(--gradY) var(--gradX), var(--c1) 10%, var(--c2) 30%) 20;
+    animation: borderRadial 7s linear infinite;
+}
+@keyframes movingTitle {
+    from{
+        transform: scale(1);
+    }
+    to{
+        transform: scale(1.05);
+    }
+}
+/*Description Div*/
+.DescriptionSkill{
+    width: 100%;
+    height: 100%;
+    color: white;
+    font-size:1.1em;
+    text-shadow: 0px 3px 3px black;
+}
+/*Vocabulaire Div*/
+.VocSkill{
+    margin-top: 4%;
+    display: flex;
+    justify-content: center;
+    color: white;
+    text-shadow: 0px 3px 3px black;
+}
+.Abrevation{
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    width: fit-content;
+    padding: 1% 0;
+    border-top: 2px solid rgba(240, 230, 230, 0.5);
+    border-bottom: 2px solid rgba(240, 230, 230, 0.5);
+    color: var(--c1);
+}
+
+.VocSkill div:nth-child(1){
+    padding-left: 1%;
+    border-left: 2px solid rgba(240, 230, 230, 0.5);
+}
+.Signification{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    width: fit-content;
+    margin-left: 1%;
+    padding: 1% 0;
+    border-top: 2px solid rgba(240, 230, 230, 0.5);
+    border-bottom: 2px solid rgba(240, 230, 230, 0.5);
+}
+.VocSkill div:nth-child(4){
+    padding-right: 1%;
+    border-right: 2px solid rgba(240, 230, 230, 0.5);
+}
+.VocSkill p{
+    font-size: 0.6em;
+    margin: 0;
+}
+/*Combo Div*/
+.ComboDescription{
+    width: 100%;
+}
+
+.ComboDescription p:nth-child(1){
+    color: var(--c1);
+}
+/*Logo Miyoversee*/
+.LogoMiyoversee{
+    position: absolute;
+    height: 10%;
+    filter: drop-shadow(0px 0px 2px white);
+    animation: movingLogo 3.5s alternate-reverse linear infinite
+}
+
+@keyframes movingLogo {
+    from{
+        bottom: 1%;
+    }
+    to{
+        bottom: 0%;
+    }
+}
+/*Emoji*/
+.EmojiDiv{
+    position: absolute;
+    height: 18%;
+    bottom: 0;
+    right: 0;
+    transform: rotateY(180deg);
+    filter: drop-shadow(0px 0px 5px var(--c1));
+    z-index: 3;
+}
+
+.Emoji{
+    height: 100%;
+}
+
+.NameYoutube{
+    position: absolute;
+    height: 10%;
+    display: flex;
+    color: white;
+    transform: rotateY(180deg);
+    bottom: 2%;
+    font-size: 1.5em;
+}
+
+.NameYoutube p{
+    font-style: italic;
+    margin: 0;
+    display: inline-block;
+    text-shadow: 0px 5px 5px black;
+
+}
+
+.yuki{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.ice{
+    position: absolute;
+    top: -10%;
+    background-color: var(--c1);
+    box-shadow: 0 0 30px var(--c1);
+    border-radius: 50%;
+    filter: blur(5px);
+}
+
+@keyframes translate {
+    from{}
+    to{
+        top: 120%;
+    }
+}
+
+@keyframes wind {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(150px);
+    }
+  }
