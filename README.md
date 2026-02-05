@@ -1,1 +1,15 @@
-A comprehensive README documenting C projects (Incognito Game and Darkest Dungeon Game using FLTK), Python projects (Breakout Game, Mahjong Game with Anime Pictures, and Traps Game), and Web projects (YouTube Clone, Naruto Official Website Clone, and JavaScript Games)
+# Projects by Programming Language
+
+## C Projects
+- Incognito Game
+- Darkest Dungeon Game using FLTK interface
+
+## Python Projects
+- Breakout Game
+- Mahjong Game with Anime Pictures
+- Traps Game
+
+## Web Projects
+- YouTube Clone
+- Naruto Official Website Clone
+- JavaScript Games
